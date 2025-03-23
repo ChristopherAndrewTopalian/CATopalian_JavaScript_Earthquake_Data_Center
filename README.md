@@ -1,7 +1,9 @@
 # CATopalian JavaScript Earthquake Data Center
 A JavaScript application that gets all recent Earthquake data and color codes each Earthquake to make it easy to search by most recent earthquakes which ones were big (red), medium (blue) and small (gray). This makes it easier for scientists to read the data.  
 
-USE APP: https://christopherandrewtopalian.github.io/CATopalian_JavaScript_Earthquake_Data_Center/CATopalian_JavaScript_Earthquake_Data_Center.html
+USE APP: https://christopherandrewtopalian.github.io/CATopalian_JavaScript_Earthquake_Data_Center/CATopalian_JavaScript_Earthquake_Data_Center.html  
+
+![screenshot_001](src/media/textures/screenshots/001.JPG)  
 
 If you enjoy my apps and tutorials please consider buying me a coffee at [paypal.me/keystonermarch](https://www.paypal.com/paypalme/keystonermarch)
 
