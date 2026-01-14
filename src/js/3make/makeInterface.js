@@ -2,10 +2,32 @@
 
 function makeInterface()
 {
+    let titleContainer = ce('div');
+    titleContainer.style.position = 'absolute';
+    titleContainer.style.top = '2px';
+    //titleContainer.style.left = '50%';
+    //titleContainer.style.transform = 'translateX(-50%)'; // center horizontally
+    ba(titleContainer);
+
+    //-//
+
+    let titleOfApplication = ce("a");
+    titleOfApplication.style.whiteSpace = 'nowrap';
+    titleOfApplication.style.fontSize = '17px';
+    titleOfApplication.style.color = 'rgb(100, 100, 100)';
+    titleOfApplication.style.fontWeight = 'bold';
+    titleOfApplication.href = 'https://github.com/ChristopherAndrewTopalian/CATopalian_JavaScript_Earthquake_Data_Center';
+    titleOfApplication.target = '_blank';
+    titleOfApplication.textContent = ' CATopalian JavaScript Earthquake Data Center';
+    titleOfApplication.style.textAlign = 'center';
+    titleContainer.append(titleOfApplication);
+
+    //-//
+
     let mainContainer = ce('div');
     mainContainer.id = 'mainContainer';
     mainContainer.style.position = 'absolute';
-    mainContainer.style.left = '20px';
+    mainContainer.style.left = '5px';
     mainContainer.style.top = '25px';
     ba(mainContainer);
 
@@ -14,7 +36,7 @@ function makeInterface()
     let earthquakeTextbox = ce('textarea');
     earthquakeTextbox.id = 'earthquakeTextbox';
     earthquakeTextbox.placeholder = 'Earthquake Data';
-    earthquakeTextbox.style.width = 800 + 'px';
+    earthquakeTextbox.style.width = '100%';
     earthquakeTextbox.style.height = 150 + 'px';
     mainContainer.append(earthquakeTextbox);
 
@@ -78,7 +100,7 @@ function makeInterface()
 //----//
 
 // Dedicated to God the Father
-// All Rights Reserved Christopher Andrew Topalian Copyright 2000-2025
+// All Rights Reserved Christopher Andrew Topalian Copyright 2000-2026
 // https://github.com/ChristopherTopalian
 // https://github.com/ChristopherAndrewTopalian
 // https://sites.google.com/view/CollegeOfScripting
