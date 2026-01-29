@@ -81,6 +81,7 @@ function makeInterface()
         audioPlay('sfx_blip_001', 1.0);
 
         processEarthquakeData();
+        processByMagnitude();
     }
     mainContainer.append(parse001Button);
 
@@ -90,11 +91,75 @@ function makeInterface()
 
     //-//
 
+    let mainQuakeContainer = ce('div');
+    mainQuakeContainer.style.display = 'flex';
+    mainQuakeContainer.style.flexDirection = 'row'; // main containers side-by-side
+    mainQuakeContainer.style.gap = '20px'; // space between the two lists
+    mainContainer.append(mainQuakeContainer);
+
+    // LEFT COLUMN (ALL)
+
+    // create a Wrapper for the Left Side
+    let leftWrapper = ce('div');
+    leftWrapper.style.display = 'flex';
+    leftWrapper.style.flexDirection = 'column'; // stack title on top of box
+    mainQuakeContainer.append(leftWrapper);
+
+    //-//
+
+    // add Title to Wrapper
+    let titleAllQuakes = ce('div');
+    titleAllQuakes.textContent = 'By Date';
+    titleAllQuakes.style.fontWeight = 'bold';
+    titleAllQuakes.style.marginBottom = '5px';
+    titleAllQuakes.style.textAlign = 'center';
+    leftWrapper.append(titleAllQuakes);
+
+    //-//
+
+    // add Container to Wrapper
     let earthquakeContainer = ce('div');
+    earthquakeContainer.style.width = '350px';
+    earthquakeContainer.style.height = '200px';
+    earthquakeContainer.style.overflowY = 'auto';
     earthquakeContainer.id = 'earthquakeContainer';
     earthquakeContainer.style.display = 'flex';
     earthquakeContainer.style.flexDirection = 'column';
-    mainContainer.append(earthquakeContainer);
+    earthquakeContainer.style.border = '1px solid rgb(70, 70, 70)';
+    leftWrapper.append(earthquakeContainer);
+
+    //-//
+
+    // RIGHT COLUMN (BY MAGNITUDE)
+
+    // create a Wrapper for the Right Side
+    let rightWrapper = ce('div');
+    rightWrapper.style.display = 'flex';
+    rightWrapper.style.flexDirection = 'column'; // stack title on top of box
+    mainQuakeContainer.append(rightWrapper);
+
+    //-//
+
+    // add Title to Wrapper
+    let titleMagnitudeQuakes = ce('div');
+    titleMagnitudeQuakes.textContent = 'By Magnitude';
+    titleMagnitudeQuakes.style.fontWeight = 'bold';
+    titleMagnitudeQuakes.style.marginBottom = '5px';
+    titleMagnitudeQuakes.style.textAlign = 'center';
+    rightWrapper.append(titleMagnitudeQuakes);
+
+    //-//
+
+    // add Container to Wrapper
+    let magnitudeContainer = ce('div');
+    magnitudeContainer.style.width = '350px';
+    magnitudeContainer.style.height = '200px';
+    magnitudeContainer.style.overflowY = 'auto';
+    magnitudeContainer.id = 'magnitudeContainer';
+    magnitudeContainer.style.display = 'flex';
+    magnitudeContainer.style.flexDirection = 'column';
+    magnitudeContainer.style.border = '1px solid rgb(70, 70, 70)';
+    rightWrapper.append(magnitudeContainer);
 }
 
 //----//
